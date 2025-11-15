@@ -1,0 +1,26 @@
+==7732== Memcheck, a memory error detector
+==7732== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==7732== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==7732== Command: ./bin/execute_script script20
+==7732== 
+execute_script: src/hw7.c:56: print_matrix_sf: Assertion `mat != NULL' failed.
+==7732== 
+==7732== Process terminating with default action of signal 6 (SIGABRT)
+==7732==    at 0x490AB2C: __pthread_kill_implementation (pthread_kill.c:44)
+==7732==    by 0x490AB2C: __pthread_kill_internal (pthread_kill.c:78)
+==7732==    by 0x490AB2C: pthread_kill@@GLIBC_2.34 (pthread_kill.c:89)
+==7732==    by 0x48B127D: raise (raise.c:26)
+==7732==    by 0x48948FE: abort (abort.c:79)
+==7732==    by 0x489481A: __assert_fail_base.cold (assert.c:96)
+==7732==    by 0x48A7516: __assert_fail (assert.c:105)
+==7732==    by 0x1094F1: print_matrix_sf (hw7.c:56)
+==7732==    by 0x109324: main (execute_script.c:9)
+==7732== 
+==7732== HEAP SUMMARY:
+==7732==     in use at exit: 0 bytes in 0 blocks
+==7732==   total heap usage: 5 allocs, 5 frees, 1,936 bytes allocated
+==7732== 
+==7732== All heap blocks were freed -- no leaks are possible
+==7732== 
+==7732== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+Aborted (core dumped)

@@ -1,0 +1,22 @@
+==7809== Memcheck, a memory error detector
+==7809== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==7809== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==7809== Command: ./bin/free_bst02
+==7809== 
+==7809== 
+==7809== HEAP SUMMARY:
+==7809==     in use at exit: 72 bytes in 6 blocks
+==7809==   total heap usage: 6 allocs, 0 frees, 72 bytes allocated
+==7809== 
+==7809== 72 bytes in 6 blocks are definitely lost in loss record 1 of 1
+==7809==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==7809==    by 0x1092F4: main (free_bst02.c:8)
+==7809== 
+==7809== LEAK SUMMARY:
+==7809==    definitely lost: 72 bytes in 6 blocks
+==7809==    indirectly lost: 0 bytes in 0 blocks
+==7809==      possibly lost: 0 bytes in 0 blocks
+==7809==    still reachable: 0 bytes in 0 blocks
+==7809==         suppressed: 0 bytes in 0 blocks
+==7809== 
+==7809== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
